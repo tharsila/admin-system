@@ -302,6 +302,11 @@ return [
         ], */
 
         // Sidebar items:
+        [
+            'text' => 'Dashboard',
+            'icon'    => 'fas fa-fw fa-share',
+            'route' => 'home'
+        ],
         
         [
             'text'    => 'Entrada',
