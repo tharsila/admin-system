@@ -41,9 +41,15 @@ class CompanyController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $type = $request->tipo;
+       
+        if($type !== 'cliente' && $type !== 'fornecedor') {
+            return abort(404);
+        }
+        
+        return view('company.create', compact('type'));
     }
 
     /**
