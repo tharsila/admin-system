@@ -1,6 +1,7 @@
 @extends('adminlte::page')
 
-@section('title', 'Listagem')
+@section('title', "Listagem de {$type}")
+
 
 @section('content_header')
     <div class="row mb-2">
@@ -12,7 +13,7 @@
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('empresas.index') }}">Listagem</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('empresas.index') }}?tipo={{ $type}}">Listagem de {{ $type }}</a></li>
             </ol>
         </div>
     </div>
@@ -23,6 +24,7 @@
         <div class="card">
             <div class="card-body"> 
                 <div class="table-responsive ">
+                    <input type="hidden" id="tipo" value="{{ $type }}">
                     <table class="table table-bordered table-striped text-nowrap data-table" style="width:100%">
                         <thead>
                             <tr>
@@ -65,10 +67,11 @@
    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
    <script type="text/javascript">
         $(function () {
+            const tipo = $('#tipo').val();
             const table = $('.data-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('empresas.index') }}",
+                ajax: "{{ route('empresas.index') }}?tipo=" + tipo,
                 responsive: true,
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.13.5/i18n/pt-BR.json',

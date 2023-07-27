@@ -15,8 +15,14 @@ class CompanyController extends Controller
      */
     public function index(Request $request)
     {
+        $type = $request->tipo;
+       
+        if($type !== 'cliente' && $type !== 'fornecedor') {
+            return abort(404);
+        }
+
         if($request->ajax()) {
-            $data = Company::select('*');
+            $data = Company::allForType($type);
             return DataTables::of($data)
                     ->addIndexColumn()
                     ->addColumn('action', function ($row) {
@@ -29,7 +35,7 @@ class CompanyController extends Controller
                     ->rawColumns(['action'])
                     ->make(true);
         }
-        return view('company.index');
+        return view('company.index', compact('type'));
     }
 
     /**
