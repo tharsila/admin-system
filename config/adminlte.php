@@ -217,7 +217,7 @@ return [
     'sidebar_collapse_remember_no_transition' => true,
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
-    'sidebar_nav_accordion' => true,
+    'sidebar_nav_accordion' => false,
     'sidebar_nav_animation_speed' => 300,
 
     /*
@@ -310,11 +310,11 @@ return [
         
         [
             'text'    => 'Entrada',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-fw fa-file',
             'submenu' => [
                 [
                     'text' => 'Novo Fornecedor',
-                    'url'  => '#',
+                    'url'  => 'empresas/create?tipo=fornecedor',
                 ],
                 [
                     'text' => 'Lista de Fornecedores',
@@ -324,11 +324,11 @@ return [
         ],
         [
             'text'    => 'Saída',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
                 [
                     'text' => 'Novo Cliente',
-                    'url'  => '#',
+                    'url'  => 'empresas/create?tipo=cliente',
                 ],
                 [
                     'text' => 'Lista de Clientes',
