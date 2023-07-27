@@ -13,7 +13,7 @@
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('empresas.index') }}?tipo={{ $type}}">Listagem de {{ $type }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('empresas.index') }}?tipo={{ $type }}">Listagem de {{ $type }}</a></li>
             </ol>
         </div>
     </div>
@@ -23,6 +23,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body"> 
+                <a href="{{ route('empresas.create') }}?tipo={{ $type }}" class="btn btn-success mb-4">Novo {{$type}}</a>
                 <div class="table-responsive ">
                     <input type="hidden" id="tipo" value="{{ $type }}">
                     <table class="table table-bordered table-striped text-nowrap data-table" style="width:100%">
