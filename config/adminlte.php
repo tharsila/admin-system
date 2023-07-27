@@ -318,7 +318,7 @@ return [
                 ],
                 [
                     'text' => 'Lista de Fornecedores',
-                    'url'  => '#',
+                    'url'  => 'empresas?tipo=fornecedor',
                 ],
             ],
         ],
@@ -332,7 +332,7 @@ return [
                 ],
                 [
                     'text' => 'Lista de Clientes',
-                    'url'  => '#',
+                    'url'  => 'empresas?tipo=cliente',
                 ],
             ],
             
