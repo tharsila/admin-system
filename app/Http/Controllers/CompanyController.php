@@ -57,7 +57,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company = Company::create($request->all());
+        dd($company);
     }
 
     /**
