@@ -3,7 +3,7 @@
 <input type="hidden" name="tipo" value={{ $type }}>
 
 <div class="form-group row">
-    <label for="nome" class="col-sm-2 col-form-label required">
+    <label for="nome" class="col-sm-2 col-form-label required ">
         Nome*
     </label>
     <div class="col-sm-10">
@@ -12,9 +12,12 @@
             name="nome" 
             required 
             maxlength="255" 
-            class="form-control"
+            class="form-control @error('nome') is-invalid @enderror"
             id="nome"
         >
+        @error('nome')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -26,9 +29,12 @@
             type="text" 
             name="razao_social"  
             maxlength="255" 
-            class="form-control"
+            class="form-control @error('razao_social') is-invalid @enderror"
             id="razao_social"
         >
+        @error('razao_social')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -41,21 +47,23 @@
             name="documento" 
             required 
             maxlength="14" 
-            class="cpf_rg form-control"
+            class="cpf_rg form-control @error('documento') is-invalid @enderror"
             id="documento"
         >
+        @error('documento')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
-    <label for="ie_rg" class="col-sm-2 col-form-label required">
+    <label for="ie_rg" class="col-sm-2 col-form-label">
         IE/RG
     </label>
     <div class="col-sm-10">
         <input 
             type="text" 
             name="ie_rg"
-            required  
-            maxlength="12" 
+            maxlength="25" 
             class="ie_rg form-control"
             id="ie_rg"
         >
@@ -70,10 +78,13 @@
             type="text" 
             name="nome_contato" 
             required 
-            maxlength="255" 
-            class="nome_contato form-control"
+            maxlength="100" 
+            class="nome_contato form-control @error('nome_contato') is-invalid @enderror"
             id="nome_contato"
         >
+        @error('nome_contato')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -85,10 +96,13 @@
             type="text" 
             name="celular" 
             required 
-            maxlength="15" 
-            class="celular form-control"
+            maxlength="11" 
+            class="celular form-control @error('celular') is-invalid @enderror"
             id="celular"
         >
+        @error('celular')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -101,9 +115,12 @@
             name="email" 
             required 
             maxlength="100" 
-            class="email form-control"
+            class="email form-control @error('email') is-invalid @enderror"
             id="email"
         >
+        @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -114,10 +131,13 @@
         <input 
             type="text" 
             name="telefone" 
-            maxlength="15" 
-            class="telefone form-control"
+            maxlength="10" 
+            class="telefone form-control @error('telefone') is-invalid @enderror"
             id="telefone"
         >
+        @error('telefone')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -130,9 +150,12 @@
             name="cep" 
             required
             maxlength="8" 
-            class="cep form-control"
+            class="cep form-control @error('cep') is-invalid @enderror"
             id="cep"
         >
+        @error('cep')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -144,10 +167,13 @@
             type="text" 
             name="logradouro" 
             required
-            maxlength="150" 
-            class="logradouro form-control"
+            maxlength="100" 
+            class="logradouro form-control @error('logaradouro') is-invalid @enderror"
             id="logradouro"
         >
+        @error('logradouro')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -159,10 +185,13 @@
             type="text" 
             name="bairro" 
             required
-            maxlength="100" 
-            class="bairro form-control"
+            maxlength="50" 
+            class="bairro form-control @error('bairro') is-invalid @enderror"
             id="bairro"
         >
+        @error('bairro')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -174,10 +203,13 @@
             type="text" 
             name="cidade" 
             required
-            maxlength="100" 
-            class="cidade form-control"
+            maxlength="50" 
+            class="cidade form-control @error('cidade') is-invalid @enderror"
             id="cidade"
         >
+        @error('cidade')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">
@@ -190,9 +222,12 @@
             name="estado" 
             required
             maxlength="2" 
-            class="estado form-control"
+            class="estado form-control @error('estado') is-invalid @enderror"
             id="estado"
         >
+        @error('estado')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
     </div>
 </div>
 <div class="form-group row">

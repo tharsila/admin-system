@@ -18,8 +18,16 @@
         </div>
     </div>
 @stop
-
 @section('content')
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <div class="col-12">
         <div class="card">
             <div class="card-header">
