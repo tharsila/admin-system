@@ -14,6 +14,7 @@
             maxlength="255" 
             class="form-control @error('nome') is-invalid @enderror"
             id="nome"
+            value="{{ old('nome') }}"
         >
         @error('nome')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -31,6 +32,7 @@
             maxlength="255" 
             class="form-control @error('razao_social') is-invalid @enderror"
             id="razao_social"
+            value="{{ old('razao_social') }}"
         >
         @error('razao_social')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -49,6 +51,7 @@
             maxlength="14" 
             class="cpf_rg form-control @error('documento') is-invalid @enderror"
             id="documento"
+            value="{{ old('documento') }}"
         >
         @error('documento')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -66,6 +69,7 @@
             maxlength="25" 
             class="ie_rg form-control"
             id="ie_rg"
+            value="{{ old('ie_rg') }}"
         >
     </div>
 </div>
@@ -81,6 +85,7 @@
             maxlength="100" 
             class="nome_contato form-control @error('nome_contato') is-invalid @enderror"
             id="nome_contato"
+            value="{{ old('nome_contato') }}"
         >
         @error('nome_contato')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -99,6 +104,7 @@
             maxlength="11" 
             class="celular form-control @error('celular') is-invalid @enderror"
             id="celular"
+            value="{{ old('celular') }}"
         >
         @error('celular')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -117,6 +123,7 @@
             maxlength="100" 
             class="email form-control @error('email') is-invalid @enderror"
             id="email"
+            value="{{ old('email') }}"
         >
         @error('email')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -134,6 +141,7 @@
             maxlength="10" 
             class="telefone form-control @error('telefone') is-invalid @enderror"
             id="telefone"
+            value="{{ old('telefone') }}"
         >
         @error('telefone')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -152,6 +160,7 @@
             maxlength="8" 
             class="cep form-control @error('cep') is-invalid @enderror"
             id="cep"
+            value="{{ old('cep') }}"
         >
         @error('cep')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -170,6 +179,7 @@
             maxlength="100" 
             class="logradouro form-control @error('logaradouro') is-invalid @enderror"
             id="logradouro"
+            value="{{ old('logradouro') }}"
         >
         @error('logradouro')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -188,6 +198,7 @@
             maxlength="50" 
             class="bairro form-control @error('bairro') is-invalid @enderror"
             id="bairro"
+            value="{{ old('bairro') }}"
         >
         @error('bairro')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -206,6 +217,7 @@
             maxlength="50" 
             class="cidade form-control @error('cidade') is-invalid @enderror"
             id="cidade"
+            value="{{ old('cidade') }}"
         >
         @error('cidade')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -224,6 +236,7 @@
             maxlength="2" 
             class="estado form-control @error('estado') is-invalid @enderror"
             id="estado"
+            value="{{ old('estado') }}"
         >
         @error('estado')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -241,6 +254,7 @@
             maxlength="500" 
             class="observacao form-control"
             id="observacao"
+            value="{{ old('observacao') }}"
         >
     </div>
 </div>
