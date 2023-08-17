@@ -49,7 +49,7 @@
             name="documento" 
             required 
             maxlength="14" 
-            class="cpf_rg form-control @error('documento') is-invalid @enderror"
+            class="cpf_cnpj form-control @error('documento') is-invalid @enderror"
             id="documento"
             value="{{ old('documento') }}"
         >

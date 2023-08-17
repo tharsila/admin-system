@@ -51,4 +51,41 @@
 
 @section('js')
    {{--  <script> console.log('Hi!'); </script> --}}
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+   <script>
+        $(document).ready(function() {
+            $('.celular').mask('(00) 00000-0000');
+            $('.telefone').mask('(00) 0000-0000');
+            $('.cep').mask('00000-000');
+
+            const field = '.cpf_cnpj';
+
+            $(field).keydown(function() {
+                try{
+                    $(field).unmask();
+                } catch(e) {}
+                
+                const size = $(field).val().length;
+    
+                if(size < 11) {
+                    $(field).mask('000.000.000-00')
+                } else {
+                    $(field).mask('00.000.000/0000-00')
+                }
+                
+                const elem = this;
+    
+                setTimeout(() => {
+                    elem.selectionStart = elem.selectionEnd = 10000;
+                }, 0);
+    
+                const currentValue = $(this).val();
+                $(this).val('');
+                $(this).val(currentValue);
+            })
+            
+            
+        });
+   </script>
 @stop
